@@ -1,0 +1,147 @@
+/* Page background with gradient */
+.all {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Apply fonts globally */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Container box */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Header */
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input + button */
+.todo-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+#todo-text {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#todo-text:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+}
+
+#add-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#add-btn:hover {
+  background-color: #5548c8;
+   transform: scale(1.1);
+}
+
+/* Todo list */
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Each todo item */
+#todo-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #6c63ff;
+  border-radius: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #2d3436;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+#todo-list div:hover {
+  background: #fdcb6e;
+  transform: translateY(-2px);
+}
+
+/* Todo text */
+#todo-list div span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #2d3436;
+}
+
+/* Delete button */
+#todo-list div button {
+  background-color: #d63031;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#todo-list div button:hover {
+  background-color: #e17055;
+  transform: scale(1.1);
+}
